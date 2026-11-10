@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gilar Pandita - Reversing the Decline</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gilar Pandita - Reversing the Decline">
+    <meta name="keywords" content="Gilar Pandita, Portfolio, Data Analyst">
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/animate.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="assets/css/ionicons.min.css"> <!-- Resource style -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div class="wrapper">
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" width="40" alt="Logo"></a>
+      <div id="main" class="main">
+        <div class="project-page">
+          <div class="container custompadding">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="project-intro wow fadeInUp">
+                  <h1>Reversing the Decline: Diagnosing a 53.5% Revenue Drop in Iowa's Wholesale Spirits Market</h1>
+                  
+                  <p>I analyzed four years of wholesale transactions from the Iowa Liquor Sales dataset (BigQuery public data) for Baugment,
+                    my fictional name for Rémy Cointreau USA. Revenue fell from $6.06M in 2021 to $2.82M in 2025. My goal was to find the cause and define actions to reach 5% growth in 2026.
+                    The problem. Revenue per active store dropped 58.4% while the store count grew 11.7%. I split the possible causes into three: category mix, order depth, and geography. Each got one KPI and one if-then hypothesis.The data fix that changed the answer. The vendor appeared in six variants of ID format and name spelling. Standard filters missed 43,613 rows, about 20% of transactions. After I fixed the filter in SQL, the revenue peak moved from 2022 to 2021 and the measured decline grew from 39.8% to 53.5%. I also handled blank county numbers, returns, and one extreme outlier, and I documented each decision.
+                   </p>
+                   <img class="img-responsive" src="assets/images/5.jpg" alt="Project Image">
+                   <p style="font-weight: bold;">What the data showed</p>
+                      <ul style="list-style-type: disc; padding-left: 1.5em; margin: 0; font-family: roboto; font-weight: 300; line-height: 1.5; font-size: 16px;">
+                        <li>Existing stores order less. Transactions per store fell 46.2%, and bottles per transaction fell 33.8%.</li>
+                        <li>The decline sits in one category. Imported Brandies dropped 67.4%, while Cordials & Liqueurs grew 61.3%.</li>
+                        <li>Geography splits the picture. Linn (-61%) and Scott (-63.4%) fell hardest, and Polk held at -33.5%. My geography hypothesis failed as written, and the result gave a sharper finding.</li>
+                        <li>Brandies account for 78.5% of all-time revenue, which creates a portfolio risk.</li>                        
+                      </ul>
+                  <p style="font-weight: bold;">Recommendations</p>
+                   <p>I proposed three actions with owners and deadlines: field re-engagement of Brandies accounts in Linn and Scott within three months, a pricing and competitor review of Brandies paired with lessons from Cordials growth, and diversification into Dry Gins and Gold Rum over six to twelve months.
+                   </p>
+                   <p style="font-weight: bold;">What I delivered</p>
+                    <p>I owned the project from start to finish: problem framing, a stakeholder map (DARCI), a MECE root cause tree, BigQuery SQL, four Tableau charts and a published dashboard,
+                      and a 41-slide deck with appendix and speaking script.
+                   </p>
+                   <p style="font-weight: bold;">Tools</p>
+                    <p>BigQuery SQL, Tableau, PowerPoint.
+                   </p>
+                </div>
+                <div class="project-nav">
+                  <div class="col-md-4 col-xs-4 nopadding">
+                    <div class="nav-icon">
+                      <i class="ion-ios-arrow-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="inner-nav">
+                      <a href="project.html">Prev</a>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-xs-4 text-center">
+                    <div class="project-main">
+                      <a href="index.html"><i class="ion-android-apps" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-xs-4 nopadding">
+                    <div class="nav-icon right">
+                      <i class="ion-ios-arrow-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="inner-nav right">
+                      <a href="project.html">Next</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="contact-link text-center">
+                    <img class="img-circle" src="assets/images/icon.jpg" width="80" alt="Icon">
+                    <a href="mailto:gilar.pandita@baugment.com" target="_top">gilar.pandita@baugment.com</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-4">
+                  <div class="social">
+                    <ul>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">Twitter</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-8 ">
+                  <div class="address">
+                    <h2>Gilar Pandita,<br class="hidden-xs"> Yogyakarta, Indonesia</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scroll To Top -->
+
+          <a id="back-top" class="back-to-top page-scroll" href="#main">
+          <i class="ion-ios-arrow-up"></i>
+          </a>
+
+          <!-- Scroll To Top Ends-->
+
+
+      </div> <!-- Main -->
+    </div><!-- Wrapper -->
+
+
+    <!-- Jquery and Js Plugins -->
+    <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.js"></script>
+    <script type="text/javascript" src="assets/js/scrollingnav.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+  </body>
+</html>
