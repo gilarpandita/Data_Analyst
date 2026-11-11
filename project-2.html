@@ -26,30 +26,36 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
                 <div class="project-intro wow fadeInUp">
-                  <h1>Reversing the Decline: Diagnosing a 53.5% Revenue Drop in Iowa's Wholesale Spirits Market</h1>
+                  <h1>Brewing Engagement: Finding What Drives Instagram Engagement for a Yogyakarta Chocolate Café</h1>
                   
-                  <p>I analyzed four years of wholesale transactions from the Iowa Liquor Sales dataset (BigQuery public data) for Baugment,
-                    my fictional name for Rémy Cointreau USA. Revenue fell from $6.06M in 2021 to $2.82M in 2025. My goal was to find the cause and define actions to reach 5% growth in 2026.
-                    The problem. Revenue per active store dropped 58.4% while the store count grew 11.7%. I split the possible causes into three: category mix, order depth, and geography. Each got one KPI and one if-then hypothesis.The data fix that changed the answer. The vendor appeared in six variants of ID format and name spelling. Standard filters missed 43,613 rows, about 20% of transactions. After I fixed the filter in SQL, the revenue peak moved from 2022 to 2021 and the measured decline grew from 39.8% to 53.5%. I also handled blank county numbers, returns, and one extreme outlier, and I documented each decision.
+                  <p>The CSV contains 16 Instagram posts (Oct 5 to Nov 9, 2026) with a total reach of 35,433 and 778 engagements.
+                    Engagement rate (ER) in this file is engagements divided by reach. Median ER per post is 3.7%, and the pooled ER is 2.2%. 
+                    Of the 16 posts, 14 are organic, 1 is boosted, and 1 is a collaboration. These two paid or partnered posts matter because they distort the reach picture.
                    </p>
                    <img class="img-responsive" src="../images/5.jpg" alt="Project Image">
-                   <p style="font-weight: bold;">What the data showed</p>
+                   <p style="font-weight: bold;">Key Findings</p>
                       <ul style="list-style-type: disc; padding-left: 1.5em; margin: 0; font-family: roboto; font-weight: 300; line-height: 1.5; font-size: 16px;">
-                        <li>Existing stores order less. Transactions per store fell 46.2%, and bottles per transaction fell 33.8%.</li>
-                        <li>The decline sits in one category. Imported Brandies dropped 67.4%, while Cordials & Liqueurs grew 61.3%.</li>
-                        <li>Geography splits the picture. Linn (-61%) and Scott (-63.4%) fell hardest, and Polk held at -33.5%. My geography hypothesis failed as written, and the result gave a sharper finding.</li>
-                        <li>Brandies account for 78.5% of all-time revenue, which creates a portfolio risk.</li>                        
+                        <li><strong style="font-weight: 500;">Reach is highly concentrated.</strong> The top three posts account for 79% of total reach: the boosted post (18,219), the collaboration (5,949), and one organic Halloween-themed post (3,804). Median reach for organic posts is only about 560.</li>                        
+                        <li><strong style="font-weight: 500;">High reach does not mean high engagement.</strong> The boosted post had the largest reach but the lowest ER (0.76%). Reach and ER are negatively correlated in this dataset (-0.52), because low-reach posts automatically get inflated ER. ER alone is not enough, so shares, saves, and profile visits should be read alongside it.</li>
+                        <li><strong style="font-weight: 500;">Format:</strong> Reels have a median ER of 5.2% versus 3.4% for images, but there are only 2 Reels out of 16 posts. This is a promising direction, not a conclusion.</li>
+                        <li><strong style="font-weight: 500;">Content pillar:</strong> Menu Spotlight is the most frequent pillar (9 posts) with a solid median ER of 4.0%, but its reach is low (median 424) and it earns almost no shares or saves. The Halloween-themed Community Engagement posts are the strongest on shares (median 40), saves, and profile visits, though only 2 of them are organic.</li>
+                        <li><strong style="font-weight: 500;">Posting time:</strong> The 2-4 PM slot has the highest ER (median 5.0%) but the lowest reach (329). The 11 AM-1 PM slot has higher reach and produced 6 of the 7 new followers. There are too few posts per weekday to compare days.</li>    
+                        <li><strong style="font-weight: 500;">Caption style:</strong> Longer captions tend to have lower ER (correlation -0.45). Captions of 36-70 words have a median ER of 3.1%, versus 4.0% for 16-35 words. Captions with a question mark scored lower (2.9% vs 4.0%). This may reflect tone or topic rather than cause and effect.</li>
                       </ul>
-                  <p style="font-weight: bold;">Recommendations</p>
-                   <p>I proposed three actions with owners and deadlines: field re-engagement of Brandies accounts in Linn and Scott within three months, a pricing and competitor review of Brandies paired with lessons from Cordials growth, and diversification into Dry Gins and Gold Rum over six to twelve months.
-                   </p>
-                   <p style="font-weight: bold;">What I delivered</p>
-                    <p>I owned the project from start to finish: problem framing, a stakeholder map (DARCI), a MECE root cause tree, BigQuery SQL, four Tableau charts and a published dashboard,
-                      and a 41-slide deck with appendix and speaking script.
-                   </p>
-                   <p style="font-weight: bold;">Tools</p>
-                    <p>BigQuery SQL, Tableau, PowerPoint.
-                   </p>
+                  <p style="font-weight: bold;">Initial recommendations</p>
+                   <ul style="list-style-type: disc; padding-left: 1.5em; margin: 0; font-family: roboto; font-weight: 300; line-height: 1.5; font-size: 16px;">
+                        <li>Publish more Reels and track them separately, since there are only 2 samples so far.</li>                        
+                        <li>Keep Menu Spotlight, but borrow the Community Engagement approach that drives shares and profile visits, such as seasonal or story-driven themes.</li>
+                        <li>Test shorter captions (under 35 words) against longer ones on the same topic.</li>
+                        <li>Report ER together with shares, saves, and profile visits, so high reach from boosting doesn’t mask organic performance.</li>                      
+                    </ul>
+                   <p style="font-weight: bold;">Caveats</p>
+                    <ul style="list-style-type: disc; padding-left: 1.5em; margin: 0; font-family: roboto; font-weight: 300; line-height: 1.5; font-size: 16px;">
+                        <li>The sample is very small (16 posts over 5 weeks), so everything here is indicative. In your portfolio, describe it as a pilot analysis.</li>
+                        <li>Posts from early November may not have accumulated their full reach yet, so avoid reading a decline into the November numbers.</li>
+                        <li>The Campaign, Views, and UTM columns are empty, so the impact of campaigns like Rabo Italiano or Sunday Chill can’t be measured from this file.</li>
+                    </ul>
+                   
                 </div>
                 <div class="project-nav">
                   <div class="col-md-4 col-xs-4 nopadding">
